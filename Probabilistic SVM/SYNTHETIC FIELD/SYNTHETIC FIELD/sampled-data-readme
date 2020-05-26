@@ -1,0 +1,7 @@
+The data in sampled-data.tar.gz is organized as follows. Each file has a name in the form
+
+  smpls-n{x}-r{y}.txt
+
+where x is the number of sample points, and y is the realisation number.  
+The error measure I've used for the classification accuracy is fractional  
+error - i.e. the fraction of grid points that are correctly classified.

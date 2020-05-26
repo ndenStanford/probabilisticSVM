@@ -1,0 +1,18 @@
+<parameters> <algorithm name="kriging" /> 
+  <Grid_Name value="working_grid" /> 
+  <Property_Name  value="kriged_indicator" />
+<Hard_Data grid="indicatorXYZ" property="Indicator" /> 
+<Kriging_Type type="Ordinary Kriging (OK)">
+  <parameters />
+</Kriging_Type>
+  <Min_Conditioning_Data  value="0" /> 
+  <Max_Conditioning_Data  value="12" /> 
+  <Search_Ellipsoid value="50 50 50
+0 0 0" />
+<Variogram nugget="0.1" structures_count="1">
+  <structure_1 contribution="0.9" type="Spherical">
+    <ranges max="30" medium="30" min="30" />
+    <angles x="0" y="0" z="0" />
+  </structure_1>
+</Variogram>
+</parameters> 

@@ -1,0 +1,13 @@
+TRS0003.grd: file containing the generated transmissivity field. 
+  It is an asci file, where the data are stored as in SURFER 
+
+TRS0003.txt: file containing the generated transmissivity field. 
+  It is an asci file, where the data are stored as x, y, Y(x,y) 
+
+FIA0003.grd: file containing the hydraulic head distribution. 
+  Same storage as above. 
+
+Figure_1.pdf: image containing the transmissivity field with 
+  overlaid the head distribution contours.
+
+Figure_2.jpg: a 3-D image of the head distribution.

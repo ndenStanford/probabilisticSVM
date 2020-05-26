@@ -1,0 +1,7 @@
+SkyTEM(2x2x1)
+1
+permeability
+2.3
+4.1
+5
+2

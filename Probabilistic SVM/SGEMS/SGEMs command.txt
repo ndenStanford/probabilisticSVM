@@ -1,0 +1,15 @@
+import sgems
+from math import *
+for i in range(5):
+	input='sample'+str(i)+'.txt'
+	dir='C:/Users/nden/Desktop/3rd year Master/research/generated_samples/'
+	path=dir+input
+	sgems.execute('LoadObjectFromFile  '+path+'::All')
+	grid_name='testGrid'+str(i)
+	sgems.execute('NewCartesianGrid  '+grid_name+'::60::60::1::0.2::0.2::1.0::0::0::0')
+	krig_name='indicator_krig_'+str(i)
+	#sgems.execute('RunGeostatAlgorithm  indicator_kriging::/GeostatParamUtils/XML::<parameters>  <algorithm name="indicator_kriging" />     <Grid_Name  value="testGrid'+str(i)+'"  />     <Property_Name  value="krigInd" />     <spinBox2  value="1" />     <Categorical_Variable_Flag  value="0"  />     <Marginal_Probabilities  value="0.35 0.65" />     <Median_Ik_Flag  value="1"  />     <Full_Ik_Flag  value="0"  />     <Hard_Data_Grid  value="s'+str(i)+'"  />     <Hard_Data_Property count="1"   value="classLitho"  />     <Min_Conditioning_Data  value="30" />     <Max_Conditioning_Data  value="80" />     <Search_Ellipsoid  value="10 10 2  0 0 0" />    <Variogram_Median_Ik  nugget="0.3" structures_count="1"  >    <structure_1  contribution="0.7"  type="Exponential"   >      <ranges max="8.8"  medium="5.2"  min="0"   />      <angles x="0"  y="0"  z="0"   />    </structure_1>  </Variogram_Median_Ik>    <Variogram_Full_Ik  nugget="0" structures_count="1"  >    <structure_1  contribution="0"  type="Spherical"   >      <ranges max="0"  medium="0"  min="0"   />      <angles x="0"  y="0"  z="0"   />    </structure_1>  </Variogram_Full_Ik>  </parameters>')	
+	sgems.execute('RunGeostatAlgorithm  indicator_kriging::/GeostatParamUtils/XML::<parameters>  <algorithm name="indicator_kriging" />     <Grid_Name  value="testGrid'+str(i)+'"  />     <Property_Name  value="krigInd" />     <spinBox2  value="1" />     <Categorical_Variable_Flag  value="0"  />     <Marginal_Probabilities  value="0.35 0.65" />     <Median_Ik_Flag  value="1"  />     <Full_Ik_Flag  value="0"  />     <Hard_Data_Grid  value="s'+str(i)+'"  />     <Hard_Data_Property count="1"   value="classLitho"  />     <Min_Conditioning_Data  value="30" />     <Max_Conditioning_Data  value="80" />     <Search_Ellipsoid  value="10 10 2  0 0 0" />    <Variogram_Median_Ik  nugget="0.0" structures_count="1"  >    <structure_1  contribution="0.22"  type="Exponential"   >      <ranges max="5.8"  medium="3.4"  min="3.4"   />      <angles x="0"  y="0"  z="0"   />    </structure_1>  </Variogram_Median_Ik>    <Variogram_Full_Ik  nugget="0" structures_count="1"  >    <structure_1  contribution="0"  type="Spherical"   >      <ranges max="0"  medium="0"  min="0"   />      <angles x="0"  y="0"  z="0"   />    </structure_1>  </Variogram_Full_Ik>  </parameters>')	
+	filename='krig'
+	sgems.execute('SaveGeostatGrid  testGrid'+str(i)+'::C:/Users/nden/Desktop/3rd year Master/research/SGEMS output/sample'+str(i)+'_SGEMS::gslib::0::krigInd__real0')
+

@@ -1,0 +1,9 @@
+<!DOCTYPE gridGeometry>
+<Grid type="Point_set" name="indicatorXYZ">
+ <Geometry size="12866"/>
+ <Properties>
+  <GsTLGridProperty filepath="properties/property__Indicator.sgems" type="Continuous" name="Indicator"/>
+ </Properties>
+ <Regions/>
+ <PropertyGroups/>
+</Grid>

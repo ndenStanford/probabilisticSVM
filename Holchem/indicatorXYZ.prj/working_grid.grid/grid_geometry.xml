@@ -1,0 +1,10 @@
+<!DOCTYPE gridGeometry>
+<Grid type="Cgrid" name="working_grid">
+ <Geometry dx="105.1999969482422" dy="112" dz="6" ox="0" oy="0" nx="100" oz="0" ny="100" nz="30"/>
+ <Properties>
+  <GsTLGridProperty filepath="properties/property__kriged_indicator.sgems" type="Continuous" name="kriged_indicator"/>
+  <GsTLGridProperty filepath="properties/property__kriged_indicator_krig_var.sgems" type="Continuous" name="kriged_indicator_krig_var"/>
+ </Properties>
+ <Regions/>
+ <PropertyGroups/>
+</Grid>
