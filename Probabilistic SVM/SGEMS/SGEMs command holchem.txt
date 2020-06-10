@@ -1,0 +1,12 @@
+# for hard sample data name grid to be s0->s1,...
+import sgems
+from math import *
+input='Holchem_sample.txt'
+dir='C:/Users/Nutchapold/Desktop/ds/stf/Probabilistic SVM/'
+path=dir+input
+sgems.execute('LoadObjectFromFile  '+path+'::All')
+grid_name='holchemGrid'
+sgems.execute('NewCartesianGrid '+grid_name+'::50::50::1::0.00084::0.00084::0.00084::-117.87757300000001::33.6893475::0')
+sgems.execute('RunGeostatAlgorithm  indicator_kriging::/GeostatParamUtils/XML::<parameters>  <algorithm name="indicator_kriging" />     <Grid_Name value="holchemGrid" region=""  />     <Property_Name  value="krigInd" />     <Nb_Indicators  value="1" />     <Categorical_Variable_Flag  value="0"  />     <Marginal_Probabilities  value="0.5 0.5" />     <Median_Ik_Flag  value="1"  />     <Full_Ik_Flag  value="0"  />     <Variogram_Median_Ik  nugget="0" structures_count="1"  >    <structure_1  contribution="0.23"  type="Exponential"   >      <ranges max="0.06"  medium="0.03"  min="0.01"   />      <angles x="0"  y="0"  z="0"   />    </structure_1>  </Variogram_Median_Ik>    <Variogram_Full_Ik  nugget="0" structures_count="1"  >    <structure_1  contribution="0"  type="Spherical"   >      <ranges max="0"  medium="0"  min="0"   />      <angles x="0"  y="0"  z="0"   />    </structure_1>  </Variogram_Full_Ik>    <Hard_Data_Grid value="holchemSample" region=""  />     <Hard_Data_Property count="1"   value="classLitho"  />     <Min_Conditioning_Data  value="3" />     <Max_Conditioning_Data  value="30" />     <Search_Ellipsoid  value="0.02 0.02 0.02  0 0 0" />    <AdvancedSearch  use_advanced_search="0"></AdvancedSearch>  </parameters>')	
+sgems.execute('SaveGeostatGrid  holchemGrid::C:/Users/Nutchapold/Desktop/ds/stf/Probabilistic SVM/SGEMS_output/holchem_SGEMS.txt::csv::0::krig')
+

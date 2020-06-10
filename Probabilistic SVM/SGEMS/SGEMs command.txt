@@ -1,6 +1,7 @@
+# for hard sample data name grid to be s0->s1,...
 import sgems
 from math import *
-for i in range(5):
+for i in range(1):
 	input='sample'+str(i)+'.txt'
 	#dir='C:/Users/nden/Desktop/3rd year Master/research/generated_samples/'
 	dir='C:/Users/Nutchapold/Desktop/ds/stf/Probabilistic SVM/generated_samples/'

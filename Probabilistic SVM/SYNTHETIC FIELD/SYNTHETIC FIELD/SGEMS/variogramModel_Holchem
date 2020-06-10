@@ -1,0 +1,9 @@
+<parameters>  <algorithm name="point_set_variogram" /> 
+  <lag_tol_  value="0.0002" /> 
+  <num_lags_  value="10" /> 
+  <lag_sep_  value="0.001" /> 
+  <directions_count_  value="1" /> 
+  <angle_table_  value="0 0 70 0.1 " /> 
+  <standardize_checkbox_  value="0"  /> 
+</parameters> 
+
